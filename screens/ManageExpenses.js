@@ -1,18 +1,7 @@
-import { Text , StyleSheet, View } from 'react-native';
+import { Text } from 'react-native';
 function ManageExpenses(){
-    return(
-        <>
-        <View>
-            <Text>Manage Expenses Screen</Text>
-        </View>
-        </>
-    )
+    return <Text>manage expenses</Text>
 }
 
 export default ManageExpenses;
 
-const styles = StyleSheet.create({
-    rootContainer: { 
-        flex: 1
-    }
-})

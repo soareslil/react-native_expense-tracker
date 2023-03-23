@@ -1,18 +1,7 @@
-import { Text , StyleSheet, View } from 'react-native';
+import { Text } from 'react-native';
 function AllExpenses(){
-    return(
-        <>
-        <View>
-            <Text>All Expenses Screen</Text>
-        </View>
-        </>
-    )
+    return <Text>all expenses</Text>
 }
 
 export default AllExpenses;
 
-const styles = StyleSheet.create({
-    rootContainer: { 
-        flex: 1
-    }
-})

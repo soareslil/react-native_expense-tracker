@@ -1,18 +1,7 @@
-import { Text , StyleSheet, View } from 'react-native';
+import { Text } from 'react-native';
 function RecentExpenses(){
-    return(
-        <>
-        <View>
-            <Text>Recent Expenses Screen</Text>
-        </View>
-        </>
-    )
+    return <Text>recent expenses</Text>
 }
 
 export default RecentExpenses;
 
-const styles = StyleSheet.create({
-    rootContainer: { 
-        flex: 1
-    }
-})
