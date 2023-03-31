@@ -10,7 +10,7 @@ function renderExpenseItem(itemData){
 function ExpensesList({ expenses }) {
   return (
     <>
-      <FlatList 
+      <FlatList
       data={expenses}
       renderItem={renderExpenseItem}
       keyExtractor={(item)=> item.id}
@@ -21,7 +21,3 @@ function ExpensesList({ expenses }) {
 
 export default ExpensesList;
 
-const styles = StyleSheet.create({
-  container: {},
-  container: {},
-});
