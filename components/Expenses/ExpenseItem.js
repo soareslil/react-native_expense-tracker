@@ -1,5 +1,6 @@
 import { Pressable, View, Text, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+
 import { GlobalStyles } from "../../constants/styles";
 import { getFormattedDate } from "../../util/date";
 
@@ -37,7 +38,7 @@ export default ExpenseItem;
 
 const styles = StyleSheet.create({
   pressed:{
-    opacity: 0.75
+    opacity: 0.75,
   },
   expenseItem: {
     padding: 15,
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 4,
-    minWidth: 80
+    minWidth: 80,
   },
   amount: {
     color: GlobalStyles.colors.primary500,

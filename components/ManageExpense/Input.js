@@ -42,14 +42,14 @@ const styles = StyleSheet.create({
     },
     inputMultiline: {
         minHeight: 100,
-        textAlignVertical: 'top'
+        textAlignVertical: 'top',
     },
     invalidLabel:{
         color: GlobalStyles.colors.error500,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
     invalidInput:{
         backgroundColor: GlobalStyles.colors.error500,
-        fontWeight: 'bold'
-    },
-})
+        fontWeight: 'bold',
+    }
+});

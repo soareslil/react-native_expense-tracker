@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, StyleSheet, Text, Alert } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 
 import Input from "./Input";
 import Button from '../UI/Button';
@@ -19,7 +19,7 @@ function ExpenseForm({onCancel, onSubmit, submitButtonLabel, defaultValues}) {
     description: {
       value: defaultValues ? defaultValues.description : '',
       isValid: true,
-    }
+    },
   });
 
   function inputChangedHandler(inputIdentifier, enteredValue) {
@@ -49,16 +49,13 @@ function ExpenseForm({onCancel, onSubmit, submitButtonLabel, defaultValues}) {
           date: { value: curInputs.date.value, isValid: dateIsValid },
           description: { value: curInputs.description.value, isValid: descriptionIsValid },
         }
-      })
+      });
       return;
-    } else {
-
-    }
-
+    };
     onSubmit(expenseData);
-  }
+  };
 
-  const formIsInvalid = !inputs.amount.isValid || !inputs.date || !inputs.description;
+  const formIsInvalid = !inputs.date.isValid || !inputs.amount.isValid || !inputs.description.isValid;
   return (
     <View style={styles.form}>
       <Text style={styles.title}>Your Expenses</Text>
@@ -80,7 +77,7 @@ function ExpenseForm({onCancel, onSubmit, submitButtonLabel, defaultValues}) {
           textInputConfig={{
             placeholder: "YYYY-MM-DD",
             maxLength: 10,
-            onChangeText: inputChangedHandler.bind(this, "date"),
+            onChangeText: inputChangedHandler.bind(this, 'date'),
             value: inputs.date.value,
           }}
         />
@@ -94,7 +91,7 @@ function ExpenseForm({onCancel, onSubmit, submitButtonLabel, defaultValues}) {
           value: inputs.description.value,
         }}
       />
-      {formIsInvalid && <Text style={styles.errorText}>Invalid input values!</Text>}
+      {formIsInvalid && (<Text style={styles.errorText}>Invalid input values!</Text>)}
       <View style={styles.buttons}>
         <Button style={styles.button} onPress={onCancel} mode="flat">
           Cancel
@@ -134,7 +131,7 @@ const styles = StyleSheet.create({
 },
 button: {
     minWidth: 120,
-    marginHorizontal: 8
+    marginHorizontal: 8,
 },
 errorText:{
   color: GlobalStyles.colors.error500,
@@ -142,6 +139,6 @@ errorText:{
   margin: 8,
   padding: 30,
   fontSize: 20,
-  fontWeight: 'bold'
+  fontWeight: 'bold',
 }
 });

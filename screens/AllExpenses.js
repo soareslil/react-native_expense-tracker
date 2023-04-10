@@ -11,9 +11,9 @@ function AllExpenses() {
     <ExpensesOutput 
       expenses={expensesCtx.expenses} 
       expensesPeriod="Total"
-      fallbackText="No registered expenses at all"
+      fallbackText="No registered expenses found!"
    />
-  )
+  );
 }
 
 export default AllExpenses;
